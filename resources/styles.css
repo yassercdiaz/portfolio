@@ -1,0 +1,155 @@
+/* Estilos globales */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #ffffff; /* Color de fondo */
+    color: #214177; /* Color principal de texto */
+}
+
+/* Cabecera */
+header {
+    background: #214177; /* Color de fondo para header */
+    color: #fff; /* Color de texto para header */
+    padding: 1rem 0;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+}
+
+header p {
+    margin: 0.5rem 0 0;
+}
+
+/* Pie de página */
+footer {
+    background: #214177; /* Color de fondo para footer */
+    color: #fff; /* Color de texto para footer */
+    text-align: center;
+    padding: 1rem 0;
+    margin-top: 2rem;
+}
+
+/* Estilos para la sección "About Me" */
+#about-me .about-me-content {
+    display: flex;
+    flex-direction: column; /* Cambia a columna para centrar la imagen arriba */
+    align-items: center;
+    gap: 1rem; /* Espacio entre la imagen y el texto */
+    text-align: center; /* Centra el texto */
+}
+
+.profile-photo {
+    width: 100px; 
+    height: 100px;
+}
+
+#about-me .about-me-text {
+    flex: 1; /* Ocupa el espacio restante */
+    max-width: 600px; /* Limita el ancho del texto */
+}
+
+/* Ajustes responsivos */
+@media (max-width: 768px) {
+    #about-me .about-me-content {
+        text-align: center; /* Mantiene el texto centrado en pantallas pequeñas */
+    }
+}
+
+/* Contenedor */
+.container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+}
+
+/* Secciones */
+.main {
+    padding: 2rem 0;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 1rem;
+    font-size: 2rem;
+    color: #214177; /* Color para títulos de sección */
+}
+
+.section {
+    padding: 1rem 0;
+}
+
+/* Tarjetas */
+.card {
+    background: #F3F8FF; /* Color de fondo para cards */
+    padding: 2rem;
+    margin-bottom: 2rem;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilos para la sección de Educación */
+#education .education-item {
+    background: #fff; /* Color de fondo para items de educación */
+    padding: 1.5rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#education .education-item h3 {
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+}
+
+#education .education-item p {
+    margin-bottom: 0.5rem;
+}
+
+#education .education-item p:last-child {
+    margin-bottom: 0;
+}
+
+/* Proyectos */
+.project {
+    background: #f9f9f9;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.project h3 {
+    margin-top: 0;
+    color: #0F67B1;
+}
+
+/* Habilidades */
+.skills-list {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+}
+
+.skills-list li {
+    display: inline-block;
+    background: #0F67B1;
+    color: #fff;
+    padding: 0.5rem 1rem;
+    margin: 0.2rem;
+    border-radius: 3px;
+}
+
+/* Contacto */
+#contact p {
+    text-align: center;
+}
+
+.social-links {
+    text-align: center;
+}
