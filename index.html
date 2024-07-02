@@ -36,7 +36,7 @@
         <div class="education-item">
             <div class="row">
                 <div class="col-6">
-                    <h3>Taleto Tech - Universidad Sergio Arboleda</h3>
+                    <h3>Talento Tech - Universidad Sergio Arboleda</h3>
                     <p>Bootcamp Análisis de Datos</p>
                 </div>
                 <div class="col-6" style="display: flex; justify-content: flex-end;">
@@ -51,7 +51,7 @@
                     <p>Ingeniería de Sistemas Y Computación</p>
                 </div>
                 <div class="col-6" style="display: flex; justify-content: flex-end;">
-                    <p class="text-md-right">Julio 2019 - Julio 2024</p>
+                    <p class="text-md-right">Julio 2019 - Finalizando...</p>
                 </div>
             </div>
         </div>
@@ -104,7 +104,7 @@
             const emailLink = document.getElementById('email-link');
 
             emailLink.addEventListener('click', (e) => {
-                e.preventDefault(); // Evita la acción por defecto del enlace
+                e.preventDefault();
 
                 // Crea un campo de texto temporal
                 const tempInput = document.createElement('input');
@@ -118,8 +118,6 @@
 
                 // Elimina el campo de texto temporal
                 document.body.removeChild(tempInput);
-
-                // Notifica al usuario que el correo ha sido copiado
                 alert('Dirección de correo copiada al portapapeles: ' + email);
             });
         });
