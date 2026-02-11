@@ -13,7 +13,11 @@ document.addEventListener('DOMContentLoaded', () => {
             console.error('Failed to copy email: ', err);
             alert('Failed to copy email address. Please try again.');
         })
-    
     });
-
 })
+
+async function loadComponent(id, path) {
+    const response = await fetch(path);
+    const html = await response.text();
+    document.getElementById(id).innerHTML = html;
+}
