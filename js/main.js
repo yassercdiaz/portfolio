@@ -20,3 +20,13 @@ document.addEventListener('DOMContentLoaded', () => {
     loadComponent('footer', 'components/footer.html');
     loadComponent('main-content', 'components/home.html');
 })
+
+document.addEventListener('click', (e) => {
+    if (e.target.id === 'email-link') {
+        e.preventDefault();
+        navigator.clipboard.writeText('yass18.98@gmail.com')
+            .then(() => alert('Correo electrónico copiado al portapapeles'))
+            .catch(() => alert('No se pudo copiar el correo electrónico'))
+            .catch((error) => console.error('Error al copiar el correo electrónico:', error));
+    }    
+});
