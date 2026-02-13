@@ -1,23 +1,22 @@
-document.addEventListener('DOMContentLoaded', () => {
-    const emailme = 'yass18.98@gmail.com';
-    const emailLink = document.getElementById('email-link');
-
-    if (!emailLink) return;
-
-    emailLink.addEventListener('click', (e) => {
-        e.preventDefault();
-    
-        navigator.clipboard.writeText(emailme)
-        .then(() => alert('Dirección de correo copiada al portapapeles'))
-        .catch(() => {
-            console.error('Failed to copy email: ', err);
-            alert('Failed to copy email address. Please try again.');
-        })
-    });
-})
-
 async function loadComponent(id, path) {
-    const response = await fetch(path);
-    const html = await response.text();
-    document.getElementById(id).innerHTML = html;
+    try {
+        const response = await fetch(path);
+        const html = await response.text();
+        const element = document.getElementById(id);
+
+        if (!element) {
+            console.warn(`Elemento con id "${id}" no encontrado.`);
+            return;
+        }
+
+        element.innerHTML = html;
+    } catch (error) {
+        console.error('Error cargando componente:', error);
+    }
 }
+
+document.addEventListener('DOMContentLoaded', () => {
+    loadComponent('header', 'components/header.html');
+    loadComponent('footer', 'components/footer.html');
+    loadComponent('main-content', 'components/home.html');
+})
